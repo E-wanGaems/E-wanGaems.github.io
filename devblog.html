@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>E-wanGaems</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+	
+</head>
+
+<body>
+	<center><div class="banner">
+		<img src="Images/ewanlogo6.png" style="margin-top: 40px"/>
+		
+	
+	
+	
+	
+	
+	</div>
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><span class="currentPage">Devblog</span></li>
+			<li><a href="concept.html">Concept</a></li>
+			<li><a href="community.html">Community</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	
+	
+	</nav>
+	<div class="contentHead">
+		<br>
+		<br>
+		<br>
+		<div class="sliderContainer">
+			
+			<h1 class="sliderHead">Games</h1>
+			<img onClick="slider(+1)" class="sliderButtonLeft" src="Images/arrowRight.png">
+			<img onClick="slider(-1)" class="sliderButtonRight" src="Images/arrowleft.png">
+			<div id="newsSliderContent">
+				
+				<p id="news">"Welcome to the devblog where you can keep upto date with what we are working on!"</p>
+				
+			</div>
+		</div>
+	</div>
+	<div class="contentMainBack">
+		<br>
+		<h1 class="MainHeader">Devblogs</h1>
+		<div class="contentMain">
+			<br>
+			<div class="infoButton">
+				<h2>Chasing Data</h2>
+				<img class="arrow" src="Images/arrowsUp.png"/>
+			</div>
+			<div class="infoSlideDown">
+									<h2>The remake: 24/10/2016</h2>
+				<p>Recently development has been slowed to a crawling point on chasing data. This is
+				because we have decided to completely remake the game. This decision has been made mainly 
+				due to the belief that the game can be so much more. When we are talking about a remake we aren't
+				just talking about a graphics remake, we are talking about an entire rewrite of the game mechanics 
+				and how it works hence why it is taking a while. One of the things we have been working on is diversity
+				as currently there is only one type of game mode available and based on feedback it isn't the most interesting,
+				so a re-work of the mechanics would allow us more control and make it easier to create new game modes and puzzles.
+				</p>
+				
+				<p>Another thing we have been working is graphical improvements. The original game lacked animations and a lot of the time
+				looked like still images moving. To make the game look and feel a bit more alive we will be adding a lot more animations 
+				to our sprites. These are only a fraction of the things we have been working on but we don't want to reveal too much at this
+				point as not a whole lot is done, we should be releasing the new version in intervals due to a lot of the features having a large 
+				amount of time spent on them.
+				</p>
+			</div>
+			
+			<br>
+		</div>
+		<br>
+		
+	</div>
+	<footer>
+		<ul>
+			<li><span>Home</span></li>
+			<li><a href="devblog.html">Devblog</a></li>
+			<li><a href="concept.html">Concept</a></li>
+			<li><a href="community.html">Community</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+		<div class="copyright">
+			@2016 E-wanGaems
+		</div>
+	</footer>
+	
+	</center>
+<script type="text/javascript">
+var newsIndex = 0;
+var newsBackImages = ["Images/ewanlogo7.png","Images/screenshot6.png"];
+var newsContent = [' "Welcome to the devblog where you can keep upto date with what we are working on!" ',' "Chasing Data: 27/07/16" '];
+function slider(x){
+	
+	newsIndex += x;
+	
+	if(newsIndex > newsContent.length - 1){
+		newsIndex = 0;
+		
+	}
+	else if(newsIndex < 0){
+		newsIndex = newsContent.length - 1;
+		
+	}
+	
+	document.getElementById('news').innerHTML = newsContent[newsIndex];
+	var cont = document.getElementById('newsSliderContent');
+	cont.style.backgroundImage = "url(" + newsBackImages[newsIndex] + ")"
+}
+window.setInterval(function(){
+	newsIndex += 1;
+	
+	if(newsIndex > newsContent.length - 1){
+		newsIndex = 0;
+		
+	}
+	else if(newsIndex < 0){
+		newsIndex = newsContent.length - 1;
+		
+	}
+	
+	document.getElementById('news').innerHTML = newsContent[newsIndex];
+	var cont = document.getElementById('newsSliderContent');
+	cont.style.backgroundImage = "url(" + newsBackImages[newsIndex] + ")"
+	
+}, 5000);
+
+$(document).ready(function(){
+
+	$(".infoSlideDown").hide();
+	$(".infoButton").click(function(){
+		var reset = false;
+		
+		var image = $(this).children('img');
+		
+		
+		var x = $(this).next();
+		$(this).next().slideToggle(300, function(){
+			if(x.is(":visible")){
+				image.attr('src',"Images/arrowsDown.png");
+				
+				
+				
+			}
+			else{
+				image.attr('src',"Images/arrowsUp.png");
+				
+				
+			}
+			
+		});
+		
+		
+		
+	});
+	
+	
+});
+
+
+</script>
+
+
+
+
+</body>
+
+
+
+
+
+
+</html>

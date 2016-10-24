@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>E-wanGaems</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+	
+</head>
+
+<body>
+	<center><div class="banner">
+		<img src="Images/ewanlogo6.png" style="margin-top: 40px"/>
+		
+	
+	
+	
+	
+	
+	</div>
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="devblog.html">Devblog</a></li>
+			<li><a href="concept.html">Concept</a></li>
+			<li><span class="currentPage">Community</span></li>
+			<li><a href="contact.html">Contact</a></li>
+			
+		</ul>
+	
+	
+	</nav>
+	<div class="contentHead">
+		<br>
+		<br>
+		<br>
+		<div class="sliderContainer">
+			
+			<h1 class="sliderHead">Community</h1>
+			<div id="contactContainer">
+				<p id="contactMainP">"Welcome to the community page!, Lot's of wicked stuff will be up in here."</p>
+			</div>
+			
+		</div>
+	</div>
+	<div class="contentMainBack">
+		<br>
+		<h1 class="MainHeader">Coming Soon!</h1>
+		<div class="contentMain">
+			
+			
+		</div>
+		<br>
+		
+	</div>
+	
+	<footer>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="devblog.html">Devblog</a></li>
+			<li><a href="concept.html">Concept</a></li>
+			<li>Community</li>
+			<li><a href="contact.html">Contact</a></li>
+			
+		</ul>
+		<div class="copyright">
+			@2016 E-wanGaems
+		</div>
+	</footer>
+	
+	</center>
+	
+<script type="text/javascript">
+var newsIndex = 0;
+var newsBackImages = ['Images/ewanlogo7.png'];
+var newsContent = [' "Welcome to the community page!, Lot's of wicked stuff will be up in here." '];
+
+window.setInterval(function moving(){
+	newsIndex += 1;
+	
+	if(newsIndex > newsContent.length - 1){
+		newsIndex = 0;
+		
+	}
+	else if(newsIndex < 0){
+		newsIndex = newsContent.length - 1;
+		
+	}
+	
+	document.getElementById('contactMainP').innerHTML = newsContent[newsIndex];
+	var cont = document.getElementById('contactContainer');
+	cont.style.backgroundImage = "url(" + newsBackImages[newsIndex] + ")"
+	
+}, 5000);
+
+$(document).ready(function(){
+
+	$(".infoSlideDown").hide();
+	$(".infoButton").click(function(){
+		var reset = false;
+		
+		var image = $(this).children('img');
+		
+		
+		var x = $(this).next();
+		$(this).next().slideToggle(300, function(){
+			if(x.is(":visible")){
+				image.attr('src',"Images/arrowsDown.png");
+				
+				
+				
+			}
+			else{
+				image.attr('src',"Images/arrowsUp.png");
+				
+				
+			}
+			
+		});
+		
+		
+		
+	});
+	
+	
+});
+</script>
+
+
+
+</body>
+
+
+
+
+
+
+</html>

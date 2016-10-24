@@ -1,0 +1,433 @@
+/*Styling for the main body removing any margins and setting the color */
+body{
+	background-color: #696969;
+	margin: 0px;
+}
+footer{
+	width: 1200px;
+	background-color: #707070;
+	margin: 0px;
+}
+footer ul{
+	margin: 0px;
+	
+}
+.infoSlideDown h2{
+	margin: 0px;
+	color: green;
+	text-decoration: underline;
+	
+}
+footer ul li{
+	display: inline-block;
+	padding: 20px;
+	font-weight: bold;
+	color: black;
+}
+footer ul li a{
+	text-decoration: none;
+	color: black;
+}
+.copyright{
+	width: 1190px;
+	padding: 5px;
+	background-color: #464646;
+	font-weight: bold;
+	color: white;
+}
+/*Styling for the banner at the top of the page which holds the logo */
+.banner{
+	margin: 0px;
+	width: 1200px;
+	height: 300px;
+	background-color: #707070;
+}
+/* General styling for the navigation bar*/
+nav{
+	margin: 0px;
+	width: 1200px;
+	background-color: #464646;
+	height: 110px;
+}
+/* Styling for images on the contact page which link to social media */
+.contactLink{
+	height: 200px;
+	width: 200px;
+	padding: 10px;
+}
+/* Default styling for the navbar li elements */
+nav ul li{
+	display: inline-block;
+	margin: 0px;
+	
+}
+/*Styling for the main navbar links that take the user to different pages*/
+nav ul li a{
+	
+	display: inline-block;
+	padding: 20px;
+	margin: 0px;
+	text-decoration: none;
+	
+	padding-top: 37px;
+	background-color: #464646;
+	color: #000040;
+	padding-bottom: 39px;
+	font-size: 30px;
+	
+}
+/*Styling for the unordered list in the navigationbar*/
+nav ul{
+	padding-left: 0px;
+	text-align: left;
+	margin: 0px;
+	font-size: 0px;
+	height: 100%;
+}
+/*Styling for the li that would link to the page the user is currently on*/
+.currentPage{
+	padding: 20px;
+	text-decoration: none;
+	padding-top: 38px;
+	background-color: #125400;
+	color: white;
+	margin: 0px;
+	font-size: 30px;
+	padding-bottom: 40px;
+	width: 100px;
+	
+}
+/*Removes the default margin of all paragraphs*/
+p{
+	margin: 0px;
+	
+}
+/*Styling for text inside the contactMainP div*/
+#contactMainP{
+	color: #8b0000;
+	padding: 10px;
+	
+	font-size: 40px;
+}
+/*background for the information that summarises then page*/
+.contentHead{
+	width: 1200px;
+	height: 615px;
+	background-color: #125400;
+	
+}
+/* Adds a blue background to where the main content will go on every page*/
+.contentMainBack{
+	width: 1200px;
+
+	background-color: #464646;
+}
+/* Styling for the main header inside the content main divs */
+.MainHeader{
+	margin: 0px;
+	width: 1150px;
+	font-size: 48px;
+	background-color: white;
+	color:#000033;
+	padding: 10px;
+	border-radius: 10px;
+}
+/*container that holds the slider container div*/
+.contentMain{
+	width: 1100px;
+	
+	background-color: #000033;
+	border-radius: 0px 0px 10px 10px;
+	
+}
+/*Container that wraps around the information that summarises the page */
+.sliderContainer{
+	border-radius: 20px;
+	width: 995px;
+	height: 515px;
+	background-color: #707070;
+	position: relative;
+}
+/*Styling for the main title of the page found inside the slider container*/
+.sliderHead{
+	width: 100%;
+	font-size: 48px;
+	background-color: white;
+	color:#000033;
+	padding: 20px 0px 20px 0px;
+	position: absolute;
+	bottom: 370px;
+}
+/*Styling for the slider button images*/
+.sliderButtonLeft{
+	position: absolute;
+	bottom: 75px;
+	right: 0px;
+	
+}
+
+.sliderButtonRight{
+	position: absolute;
+	bottom: 75px;
+	left: 0px;
+	
+}
+/* Styling for the description area on the homepage that wraps around the news divs*/
+#newsSliderContent{
+	display: block;
+	position: absolute;
+	width: 500px;
+	height: 300px;
+	background: url("Images/ewanlogo7.png");
+	
+	right: 247px;
+	bottom: 70px;
+	border-radius: 30px;
+	border: solid 3px black;
+	background-size: 100% 100%;
+	background-position: center;
+	
+
+	
+}
+/*Styling for the description area of the contact page*/
+#contactContainer{
+	display: block;
+	position: absolute;
+	background: url("Images/ewanlogo7.png");
+	background-size: 100% 100%;
+	background-position: center;
+	
+	width: 500px;
+	height: 300px;
+	right: 247px;
+	bottom: 70px;
+	border-radius: 30px;
+	border: solid 3px black;
+	
+}
+/*Styling for the description area of the concept page*/
+#conceptContainer{
+	display: block;
+	position: absolute;
+	background: url("Images/ewanlogo7.png");
+	background-size: 100% 100%;
+	background-position: center;
+	
+	width: 500px;
+	height: 300px;
+	right: 247px;
+	bottom: 70px;
+	border-radius: 30px;
+	border: solid 3px black;
+}
+/* Styling for what the button that toggles the slider looks like */
+.infoButton{
+	width: 300px;
+	height: 50px;
+	background-color: #3f0000;
+	position: relative;
+	border-radius: 10px 10px 0px 0px;
+}
+/* Styling for the title of the content about to appear */
+.infoButton h2{
+	
+	margin: 0px;
+	color: white;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 5px;
+}
+/* Styling for the images of arrows that are attached to the infoButtons */
+.arrow{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+/*General styling for how the slide down div will look */
+.infoSlideDown{
+	width: 70%;
+	
+	background-color: #464646;
+	border-radius: 20px;
+}
+/*Styling for paragraphs inside the slider div */
+.infoSlideDown p{
+	color: white;
+	padding: 10px;
+	font-size: 20px;
+	
+}
+/*Styling for the news text displayed on the home page*/
+#news{
+	opacity: 1;
+	font-size: 40px;
+	color: #8b0000;
+	position: absolute;
+	
+	right: 5%;
+}
+
+@media screen and (max-width: 1200px){
+	.banner{
+		width: 100%;
+	}
+	nav{
+		width: 100%;
+	}
+	
+	.currentPage{
+		width: 10%;
+		
+	}
+	.contentHead{
+		width: 100%;
+	}
+	.contentMainBack{
+		width: 100%;
+	}
+	.MainHeader{
+		width: 95%;
+	}
+	.contentMain{
+		width: 90%;
+	}
+	.sliderContainer{
+		width: 82%;
+	}
+	#newsSliderContent{
+		width: 50%;
+		right: 25%;
+	}
+	#conceptContainer{
+		width: 70%;
+		right: 15%;
+	}
+	#contactContainer{
+		width: 70%;
+		right: 15%;
+	}
+	.contactLink{
+		width: 80px;
+		height: 80px;
+	}
+	
+	
+}
+@media screen and (max-width: 768px){
+	#newsSliderContent{
+		width: 95%;
+		right: 2%;
+	}
+	.banner{
+		width: 100%;
+		height: 100%;
+	}
+	.sliderButtonLeft{
+		display: none;
+	}
+	.sliderButtonRight{
+		display: none;
+	}
+	#conceptContainer{
+		width: 95%;
+		right: 2%;
+	}
+	#contactContainer{
+		width: 95%;
+		right: 2%;
+	}
+	.infoButton{
+		width: 50%;
+	}
+	.infoButton h2{
+		position: absolute;
+		font-size: 30px;
+		bottom: 20%;
+	}
+	.arrow{
+		right: 2%;
+	}
+	.MainHeader{
+		font-size: 30px;
+	}
+	.sliderHead{
+		font-size: 30px;
+	}
+	#news{
+		font-size: 35px;
+		right: 4%;
+	}
+	nav ul{
+		text-align: center;
+	}
+	nav ul li{
+		display: block;
+		padding: 0px;
+		margin: 0px;
+		
+	}
+	nav ul li a{
+		display: inline-block;
+		background-color: grey;
+		padding: 5px;
+		width: 95%;
+		margin: 0px;
+		border:3px solid #464646;
+	}
+	nav{
+		
+		height: 99%;
+	}
+	.currentPage{
+		margin: 0px;
+		display: inline-block;
+		width: 95%;
+		text-align: centre;
+		padding: 5px;
+		border:3px solid black;
+	}
+	.banner img{
+		width: 95%;
+	}
+	footer{
+		width: 100%;
+	}
+	
+	.copyright{
+		width: 100%;
+	}
+	
+	
+}
+@media screen and (max-width: 480px){
+	.MainHeader{
+		width: 88%;
+	}
+	#contactMainP{
+		font-size: 20px;
+	}
+	#news{
+		font-size: 20px;
+	}
+	.infoButton{
+		width: 85%;
+	}
+	.infoSlideDown{
+		width: 98%;
+	}
+	.sliderHead{
+		font-size: 25px;
+	}
+	.sliderContainer{
+		width: 90%;
+		
+	}
+	footer ul li{
+		display: block;
+	}
+}
+

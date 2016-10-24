@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>E-wanGaems</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+	
+</head>
+
+<body>
+	<center><div class="banner">
+		<img src="Images/ewanlogo6.png" style="margin-top: 40px"/>
+		
+	
+	
+	
+	
+	
+	</div>
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="devblog.html">Devblog</a></li>
+			<li><a href="concept.html">Concept</a></li>
+			<li><a href="community.html">Community</a></li>
+			<li><span class="currentPage">Contact</span></li>
+		</ul>
+	
+	
+	</nav>
+	<div class="contentHead">
+		<br>
+		<br>
+		<br>
+		<div class="sliderContainer">
+			
+			<h1 class="sliderHead">Contact E-wanGaems</h1>
+			<div id="contactContainer">
+				<p id="contactMainP">"Welcome to our contact page!. Here you can see how to
+				contact E-wanGaems by our official twitter, email or facebook
+				page."</p>
+			</div>
+			
+		</div>
+	</div>
+	<div class="contentMainBack">
+		<br>
+		<h1 class="MainHeader">Contact Us!</h1>
+		<div class="contentMain">
+			<br>
+			<div class="infoButton">
+				<h2>Twitter</h2>
+				<img class="arrow" src="Images/arrowsUp.png"/>
+			</div>
+			<div class="infoSlideDown">
+				
+				<a href="https://twitter.com/EWanGaems"><img class="contactLink" src="Images/twitterLogo.png"></a>
+			</div>
+			<br>
+			<div class="infoButton">
+				<h2>Facebook</h2>
+				<img class="arrow" src="Images/arrowsUp.png"/>
+			</div>
+			<div class="infoSlideDown">
+				<a href="https://www.facebook.com/ewangaems/"><img class="contactLink" src="Images/facebookLogo.png"></a>
+			</div>
+			<br>
+			<div class="infoButton">
+				<h2>Gmail</h2>
+				<img class="arrow" src="Images/arrowsUp.png"/>
+			</div>
+			<div class="infoSlideDown">
+				<a href="mailto:ewangaems@gmail.com"><img class="contactLink" src="Images/gmailLogo.png"></a>
+			</div>
+			<br>
+			<div class="infoButton">
+				<h2>Forum</h2>
+				<img class="arrow" src="Images/arrowsUp.png"/>
+			</div>
+			<div class="infoSlideDown">
+				<p>Coming soon!</p>
+			</div>
+			<br>
+		</div>
+		<br>
+		
+	</div>
+	
+	<footer>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="devblog.html">Devblog</a></li>
+			<li><a href="concept.html">Concept</a></li>
+			<li><a href="community.html">Community</a></li>
+			<li>Contact</li>
+		</ul>
+		<div class="copyright">
+			@2016 E-wanGaems
+		</div>
+	</footer>
+	
+	</center>
+	
+<script type="text/javascript">
+var newsIndex = 0;
+var newsBackImages = ["Images/ewanlogo7.png", "Images/twitterLogo.png", "Images/facebookLogo.png", "Images/gmailLogo.png"];
+var newsContent = [' "Welcome to our contact page!. Here you can see how to contact E-wanGaems by our official twitter, email or facebook page." ', '  ', '  ', 'Gmail: ewangaems@gmail.com'];
+
+window.setInterval(function moving(){
+	newsIndex += 1;
+	
+	if(newsIndex > newsContent.length - 1){
+		newsIndex = 0;
+		
+	}
+	else if(newsIndex < 0){
+		newsIndex = newsContent.length - 1;
+		
+	}
+	
+	document.getElementById('contactMainP').innerHTML = newsContent[newsIndex];
+	var cont = document.getElementById('contactContainer');
+	cont.style.backgroundImage = "url(" + newsBackImages[newsIndex] + ")"
+	
+}, 5000);
+
+$(document).ready(function(){
+
+	$(".infoSlideDown").hide();
+	$(".infoButton").click(function(){
+		var reset = false;
+		
+		var image = $(this).children('img');
+		
+		
+		var x = $(this).next();
+		$(this).next().slideToggle(300, function(){
+			if(x.is(":visible")){
+				image.attr('src',"Images/arrowsDown.png");
+				
+				
+				
+			}
+			else{
+				image.attr('src',"Images/arrowsUp.png");
+				
+				
+			}
+			
+		});
+		
+		
+		
+	});
+	
+	
+});
+</script>
+
+
+
+</body>
+
+
+
+
+
+
+</html>

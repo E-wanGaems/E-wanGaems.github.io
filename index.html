@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>E-wanGaems</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+	
+</head>
+
+<body>
+	<center><div class="banner">
+		<img src="Images/ewanlogo6.png" style="margin-top: 40px"/>
+		
+	
+	
+	
+	
+	
+	</div>
+	<nav>
+		<ul>
+			<li><span class="currentPage">Home</span></li>
+			<li><a href="devblog.html">Devblog</a></li>
+			<li><a href="concept.html">Concept</a></li>
+			<li><a href="community.html">Community</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	
+	
+	</nav>
+	
+	<div class="contentHead">
+		<br>
+		<br>
+		<br>
+		<div class="sliderContainer">
+			
+			<h1 class="sliderHead">E-wanGaems News</h1>
+			<img onClick="slider(+1)" class="sliderButtonLeft" src="Images/arrowRight.png">
+			<img onClick="slider(-1)" class="sliderButtonRight" src="Images/arrowleft.png">
+			<div id="newsSliderContent">
+				
+				<p id="news">"Welcome to the official website of E-wanGaems!"</p>
+				
+			</div>
+		</div>
+	</div>
+	<div class="contentMainBack">
+		<br>
+		<h1 class="MainHeader">About E-wanGaems</h1>
+		<div class="contentMain">
+			<br>
+			<div class="infoButton">
+				<h2>Founder</h2>
+				<img class="arrow" src="Images/arrowsUp.png"/>
+			</div>
+			<div class="infoSlideDown">
+				<p>The founder of E-wanGaems is Ewan Jones. It was created
+				out of his passion for gaming and love for programming.</p>
+			</div>
+			<br>
+			<div class="infoButton">
+				<h2>First Project</h2>
+				<img class="arrow" src="Images/arrowsUp.png"/>
+			</div>
+			<div class="infoSlideDown">
+				<p>The first project that E-wanGaems released was called chasing data.
+				It was released to android devices on the 27th of July 2016. This project 
+				underwent minor changes for the first few months and then a full re-make.</p>
+			</div>
+			<br>
+			
+			<div class="infoButton">
+				<h2>People</h2>
+				<img class="arrow" src="Images/arrowsUp.png"/>
+			</div>
+			<div class="infoSlideDown">
+				<p>E-wanGaems currently has one person working across all of our
+				projects.</p>
+			</div>
+			<br>
+			
+			<div class="infoButton">
+				<h2>Games</h2>
+				<img class="arrow" src="Images/arrowsUp.png"/>
+			</div>
+			<div class="infoSlideDown">
+				<p>E-wanGaems currently has released one inde game for android. It's called
+				chasing data and is available from the google play store.</p>
+				<a href="https://play.google.com/store/apps/details?id=com.ewan.Chasing_Data&hl=en_GB"><img style="width: 100px; height: 100px" src="hi res icon.png" /></a>
+			</div>
+			<br>
+			
+		</div>
+		<br>
+		
+	</div>
+	<footer>
+		<ul>
+			<li><span>Home</span></li>
+			<li><a href="devblog.html">Devblog</a></li>
+			<li><a href="concept.html">Concept</a></li>
+			<li><a href="community.html">Community</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+		<div class="copyright">
+			@2016 E-wanGaems
+		</div>
+	</footer>
+	
+	</center>
+<script type="text/javascript">
+var newsIndex = 0;
+var newsBackImages = ["Images/ewanlogo7.png", "Images/screenshot6.png", "Images/phone.png"];
+var newsContent = [' "Welcome to the official website of E-wanGaems!" ', ' "We have just released a new game called chasing data!" ', ' "Chasing data now available on android devices!" '];
+function slider(x){
+	
+	newsIndex += x;
+	
+	if(newsIndex > newsContent.length - 1){
+		newsIndex = 0;
+		
+	}
+	else if(newsIndex < 0){
+		newsIndex = newsContent.length - 1;
+		
+	}
+	
+	document.getElementById('news').innerHTML = newsContent[newsIndex];
+	var cont = document.getElementById('newsSliderContent');
+	cont.style.backgroundImage = "url(" + newsBackImages[newsIndex] + ")"
+}
+window.setInterval(function(){
+	newsIndex += 1;
+	
+	if(newsIndex > newsContent.length - 1){
+		newsIndex = 0;
+		
+	}
+	else if(newsIndex < 0){
+		newsIndex = newsContent.length - 1;
+		
+	}
+	
+	document.getElementById('news').innerHTML = newsContent[newsIndex];
+	var cont = document.getElementById('newsSliderContent');
+	cont.style.backgroundImage = "url(" + newsBackImages[newsIndex] + ")"
+	
+}, 5000);
+
+$(document).ready(function(){
+
+	$(".infoSlideDown").hide();
+	$(".infoButton").click(function(){
+		var reset = false;
+		
+		var image = $(this).children('img');
+		
+		
+		var x = $(this).next();
+		$(this).next().slideToggle(300, function(){
+			if(x.is(":visible")){
+				image.attr('src',"Images/arrowsDown.png");
+				
+				
+				
+			}
+			else{
+				image.attr('src',"Images/arrowsUp.png");
+				
+				
+			}
+			
+		});
+		
+		
+		
+	});
+	
+	
+});
+
+
+</script>
+
+
+
+
+</body>
+
+
+
+
+
+
+</html>
